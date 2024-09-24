@@ -1,0 +1,27 @@
+{
+    "rewrites": [
+      {
+         "source": "/(.*)",
+        "destination": "/index.html"
+      }
+    ],
+    "redirects": [
+      {
+        "source": "/old-page",
+        "destination": "/new-page",
+        "statusCode": 301
+      }
+    ],
+    "headers": [
+      {
+        "source": "/(.*)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=0, s-maxage=86400"
+          }
+        ]
+      }
+    ]
+  }
+  
